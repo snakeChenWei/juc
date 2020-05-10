@@ -14,7 +14,7 @@ public class SemaphoreDemo {
             new Thread(() -> {
                 try {
                     semaphore.acquire();
-                    System.out.println("----进来了: " + Thread.currentThread().getName());
+                    System.out.println("----进来了: " + Thread.currentThread().getName()+" "+System.currentTimeMillis());
                     Thread.sleep(3000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();

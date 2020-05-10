@@ -1,6 +1,7 @@
 package com.snake.countDownLatch;
 
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @auther: snake
@@ -15,7 +16,7 @@ public class CountDownLatchDemo {
                 countDownLatch.countDown();
             }).start();
         }
-        countDownLatch.await();
+        countDownLatch.await(1, TimeUnit.SECONDS);
         System.out.println(Thread.currentThread().getName()+"\t班长关门走人");
     }
 }
